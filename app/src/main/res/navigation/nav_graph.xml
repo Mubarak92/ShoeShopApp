@@ -48,22 +48,12 @@
         android:label="Welcome"
         tools:layout="@layout/fragment_welcom_screen">
         <action
-            android:id="@+id/action_welcomScreenFragment_to_informationScreenFragment"
-            app:destination="@id/informationScreenFragment"
+            android:id="@+id/action_welcomScreenFragment_pop_including_details"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_welcomScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_welcomScreenFragment_pop_including_details"
-            app:popUpTo="@id/details"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
-        android:id="@+id/informationScreenFragment"
-        android:name="com.example.shoeshopapp.ui.InformationScreenFragment"
-        android:label="Information"
-        tools:layout="@layout/fragment_information_screen">
-        <action
-            android:id="@+id/action_informationScreenFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
