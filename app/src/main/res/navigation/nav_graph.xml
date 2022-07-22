@@ -49,7 +49,13 @@
         tools:layout="@layout/fragment_welcom_screen">
         <action
             android:id="@+id/action_welcomScreenFragment_to_informationScreenFragment"
-            app:destination="@id/informationScreenFragment" />
+            app:destination="@id/informationScreenFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_welcomScreenFragment_pop_including_details"
+            app:popUpTo="@id/details"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/informationScreenFragment"
