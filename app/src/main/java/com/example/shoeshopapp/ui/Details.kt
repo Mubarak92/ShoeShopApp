@@ -40,8 +40,7 @@ class Details : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.saveShoe.setOnClickListener {
             viewModel.addNewItem(10, "Test", "100", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-//            findNavController().navigate(R.id.action_details_to_homeFragment)
-            Log.e("TAG", "onViewCreated: ${viewModel.getAllItems.value?.size}")
+            findNavController().navigate(R.id.action_details_to_homeFragment)
         }
 
         binding.cancelBtn.setOnClickListener {
