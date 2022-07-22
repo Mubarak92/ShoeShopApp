@@ -1,5 +1,6 @@
 package com.example.shoeshopapp.ui
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -44,7 +45,9 @@ class ItemsViewModel : ViewModel() {
 
     // insert to Shoelist
     private fun insertItem(item: ShoesModel) {
-        viewModelScope.launch(Dispatchers.IO) { ShoesList().shoesListItem.add(item) }
+
+        viewModelScope.launch { ShoesList().addItem(item) }
+
     }
 
 }

@@ -1,5 +1,6 @@
 package com.example.shoeshopapp.data
 
+import android.util.Log
 import com.example.shoeshopapp.R
 
 class ShoesList {
@@ -44,6 +45,15 @@ class ShoesList {
 
     fun loadData(): MutableList<ShoesModel> {
         return shoesListItem
+    }
+
+    fun addItem(item : ShoesModel) {
+        Log.e("TAG", "addItem: $item and Size is ${shoesListItem.size}",)
+        shoesListItem.add(item)
+
+        Log.e("TAG", " Size is ${shoesListItem.size}",)
+
+
     }
 
 
