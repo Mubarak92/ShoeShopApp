@@ -10,4 +10,4 @@ data class ShoesModel (
     val shoeSize: String,
     val brandId: Int,
     val showDescription: String
-        )
+)

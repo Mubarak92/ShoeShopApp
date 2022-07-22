@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2005" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/drawable/ic_logo_nike_svg.xml" value="0.2005" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/layout/activity_main.xml" value="0.21666666666666667" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/layout/fragment_details.xml" value="0.18" />
@@ -10,7 +11,7 @@
         <entry key="..\:/ShoeShopApp/app/src/main/res/layout/fragment_information_screen.xml" value="0.21907861792689035" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/layout/fragment_login.xml" value="0.2726449275362319" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/layout/fragment_welcom_screen.xml" value="0.21907861792689035" />
-        <entry key="..\:/ShoeShopApp/app/src/main/res/layout/item_list.xml" value="0.21807711567351026" />
+        <entry key="..\:/ShoeShopApp/app/src/main/res/layout/item_list.xml" value="0.1" />
       </map>
     </option>
   </component>

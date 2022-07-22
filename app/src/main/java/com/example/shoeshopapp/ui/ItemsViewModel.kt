@@ -1,16 +1,15 @@
 package com.example.shoeshopapp.ui
 
-import android.content.ClipData
-import android.content.ClipDescription
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.shoeshopapp.data.DataSource
+import com.example.shoeshopapp.R
+import com.example.shoeshopapp.data.ShoesList
 import com.example.shoeshopapp.data.ShoesModel
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+
 
 class ItemsViewModel : ViewModel() {
 
@@ -22,22 +21,30 @@ class ItemsViewModel : ViewModel() {
     }
     fun sendData() {
         viewModelScope.launch {
-//           val dataset = DataSource().loadData()
-            _getAllItems.value = DataSource().loadData()
+            _getAllItems.value = ShoesList().loadData()
 
         }
 
     }
-    private fun insertItem(item: ShoesModel) {
-        viewModelScope.launch { itemDao.insert(item) }
-    }
-    fun addNewItem(itemName: String, itemBrand: Int, itemSize: String,itemDescription: String) {
-        val newItem = getNewItemEntry(itemName, itemBrand, itemSize,itemDescription )
+
+    fun addNewItem(idShoe: Int,showName : String,shoeSize: String,showDescription: String) {
+
+        val newItem = getNewItemEntry(idShoe,showName, R.drawable.ic_logo_nike_svg,shoeSize,R.string.descript1,showDescription)
+
         insertItem(newItem)
 
     }
-    private fun getNewItemEntry(itemName: String, itemPrice: String, itemCount: String): DataClass {
-        return ShoesModel(showName = itemName, imageId = )
+
+
+
+    // convert to ShoesModel(Id,showName,imageId,shoeSize,brandId,showDescription)
+    private fun getNewItemEntry(idShoe: Int,showName : String,imageId: Int,shoeSize: String,brandId: Int,showDescription: String): ShoesModel {
+        return ShoesModel(idShoe,showName,imageId,shoeSize,brandId,showDescription)
+    }
+
+    // insert to Shoelist
+    private fun insertItem(item: ShoesModel) {
+        viewModelScope.launch(Dispatchers.IO) { ShoesList().shoesListItem.add(item) }
     }
 
 }
