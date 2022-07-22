@@ -25,7 +25,7 @@ class WelcomScreenFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.welcomeScreenButton.setOnClickListener {
+        binding.buttonGetStarted.setOnClickListener {
             findNavController().navigate(R.id.action_welcomScreenFragment_to_informationScreenFragment)
         }
     }

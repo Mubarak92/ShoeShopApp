@@ -30,7 +30,7 @@ class ShoesList {
             4,
             "Sketchers",
             R.drawable.sketchers_shoe,
-            "Size 45", R.drawable.sketchers_shoe, "this is shoes"
+            "Size 45", R.drawable.skechers_logo, "this is shoes"
         ),
         ShoesModel(
             5,

@@ -1,42 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.WelcomScreenFragment">
+    android:background="@color/white"
+    tools:context=".ui.WelcomScreenFragment"
+    app:layoutDescription="@xml/onboarding_scene">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="236dp"
-        android:text="WELCOME "
-        app:layout_constraintBottom_toTopOf="@+id/welcome_screen_button"
-        app:layout_constraintEnd_toEndOf="@+id/welcome_screen_button"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/welcome_screen_button" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/car_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_car_service" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:text="TO SHOW SHOP APP"
-        app:layout_constraintBottom_toTopOf="@+id/welcome_screen_button"
-        app:layout_constraintEnd_toEndOf="@+id/welcome_screen_button"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/welcome_screen_button" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_view_first"
+        style="@style/OnBoardingTitle"
+        android:text="@string/title_on_boarding_first_slide" />
 
-    <Button
-        android:id="@+id/welcome_screen_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:gravity="bottom"
-        android:text="CONTINUE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle_view_first"
+        style="@style/OnBoardingSubTitle"
+        android:text="@string/description_on_boarding_first_slide" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/car_vin_code_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_car_in_magnifier" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_view_second"
+        style="@style/OnBoardingTitle"
+        android:text="@string/title_on_boarding_second_slide" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle_view_second"
+        style="@style/OnBoardingSubTitle"
+        android:text="@string/description_on_boarding_second_slide" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/order_box_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_order_box"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_view_third"
+        style="@style/OnBoardingTitle"
+        android:text="@string/title_on_boarding_third_slide" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle_view_third"
+        style="@style/OnBoardingSubTitle"
+        android:text="@string/description_on_boarding_third_slide" />
+
+    <View
+        android:id="@+id/indicator_view_first"
+        android:layout_width="@dimen/spacing_medium"
+        android:layout_height="@dimen/spacing_medium"
+        android:background="@drawable/background_indicator_disabled" />
+
+    <View
+        android:id="@+id/indicator_view_second"
+        android:layout_width="@dimen/spacing_medium"
+        android:layout_height="@dimen/spacing_medium"
+        android:background="@drawable/background_indicator_disabled" />
+
+    <View
+        android:id="@+id/indicator_view_third"
+        android:layout_width="@dimen/spacing_medium"
+        android:layout_height="@dimen/spacing_medium"
+        android:background="@drawable/background_indicator_disabled" />
+
+    <View
+        android:id="@+id/indicator_view_active"
+        android:layout_width="@dimen/spacing_medium"
+        android:layout_height="@dimen/spacing_medium"
+        android:background="@drawable/background_indicator_enabled" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_get_started"
+        android:text="@string/title_button_get_started"
+        style="@style/OnBoarding.Button" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

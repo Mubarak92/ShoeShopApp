@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable-v24/background_button_accent.xml" value="0.2365" />
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable-v24/background_indicator_disabled.xml" value="0.343" />
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable-v24/background_indicator_enabled.xml" value="0.343" />
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable-v24/button_text_color_selector.xml" value="0.343" />
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable-v24/ic_car_in_magnifier.xml" value="0.2365" />
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable-v24/ic_car_service.xml" value="0.2365" />
+        <entry key="..\:/ShoeShopApp/app/src/main/res/drawable-v24/ic_order_box.xml" value="0.2365" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2005" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/drawable/ic_logo_nike_svg.xml" value="0.2005" />
         <entry key="..\:/ShoeShopApp/app/src/main/res/layout/activity_main.xml" value="0.21666666666666667" />
