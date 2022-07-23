@@ -1,21 +1,27 @@
 package com.example.shoeshopapp.ui
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.shoeshopapp.R
 import com.example.shoeshopapp.data.ShoesList
 import com.example.shoeshopapp.data.ShoesModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 
-class ItemsViewModel : ViewModel() {
+class ItemsViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel() {
 
     private val _getAllItems = MutableLiveData<List<ShoesModel>>()
     val getAllItems: LiveData<List<ShoesModel>> = _getAllItems
+
+    val filteredData: MutableLiveData<String> =
+        savedStateHandle.getLiveData ("login")
+
+
+    fun setQuery(query: String) {
+        savedStateHandle["login"] = query
+    }
 
     init {
         sendData()

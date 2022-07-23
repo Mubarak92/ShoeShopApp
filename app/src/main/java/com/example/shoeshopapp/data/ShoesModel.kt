@@ -11,3 +11,9 @@ data class ShoesModel (
     val brandId: Int,
     val showDescription: String
 )
+
+data class Account(
+    val id: Int,
+    val email: String,
+    val password: String
+)
